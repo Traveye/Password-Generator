@@ -34,18 +34,13 @@ function generatePassword() {
   answers.push(getNumber, getLowerC, getUpperC, getSpecialC);
 
   // console.log(answers);
-
-  // if (answers[0] && answers[1] && answers[2] && answers[3] == false) {
-  //   alert("Oh no! You must select at least one type for a password to generate. Please try again.");
-  //   return;
-  // }
   
   var selection = [];
   var numbers = [0, 1, 2, 3, 4 , 5, 6, 7, 8, 9,];
   var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
   var upperCase = ["A", "B", "C", "D", "E", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  var specialChar = ["!", "@", "#", "$", "%"]
-
+  var specialChar = ["!","#", "$", "%", "&", "'", "()", "*", "+", ".", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", "]"]
+ 
   if (getNumber == true) {
     selection.push(numbers);
   }
@@ -62,10 +57,11 @@ function generatePassword() {
     selection.push(specialChar);
    
   }
-  console.log(selection);
-  console.log(length)
-
-  
+  // make sure at least on selection was made //
+  if (selection.length == [0]) {
+    alert("Oh no! You must select at least one type for a password to generate. Please try again.");
+    return;
+  }
 
 }
   

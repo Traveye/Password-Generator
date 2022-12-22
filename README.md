@@ -11,7 +11,9 @@ The goals of this project was to create a password generator using JavaScript th
 
 I began by creating a space for user input using `window.prompt` that would request the desired length of password from the user. This input will then be checked to ensure that it is numerical only and that it is not less than 8 nor more than 128 as directed. I also added a modulo comparision to ensure the number entered was whole. 
 
-Next I created a series of prompts using the `window.confirm` method to collect the remaining password criteria. I then ran a check to ensure at least one response had a value of true otherwise no passwor would generate. Using the `push` method, I added these boolean type responses to an array. 
+Next I created a series of prompts using the `window.confirm` method to collect the remaining password criteria.  Using the `push` method, the users response will be push the corresponding charachter arrays to a seperate array to generate the characher pool for the password. A final check is run to make sure at at least one selection was made by examining the length of this final array. 
+
+
 
 ## Installation
 NA
