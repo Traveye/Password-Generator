@@ -77,8 +77,6 @@ function generatePassword() {
     pword += selection[randomPick];
    }
 
-
-
    return(pword);
 
    
