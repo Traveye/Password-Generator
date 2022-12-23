@@ -42,19 +42,19 @@ function generatePassword() {
   var specialChar = ["!","#", "$", "%", "&", "'", "()", "*", "+", ".", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", "]"]
  
   if (getNumber == true) {
-    selection.concat(numbers);
+    selection = selection.concat(numbers);
   }
 
   if (getLowerC == true) {
-    selection.concat(lowerCase);
+    selection = selection.concat(lowerCase);
   }
 
   if (getUpperC == true) {
-    selection.concat(upperCase);
+    selection = selection.concat(upperCase);
   }  
 
   if (getSpecialC == true) {
-    selection.concat(specialChar);
+    selection = selection.concat(specialChar);
    
   }
 
@@ -72,7 +72,7 @@ function generatePassword() {
 
   var pword = "";
 
-  for (var i = 0; i <= length; i++) {
+  for (var i = 1; i <= length; i++) {
     var randomPick = Math.floor(Math.random() * selection.length);
     pword += selection[randomPick];
    }
