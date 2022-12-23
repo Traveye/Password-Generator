@@ -59,7 +59,7 @@ function generatePassword() {
   }
 
   console.log(selection);
-  
+
   // make sure at least on selection was made //
   if (selection.length == [0]) {
     alert("Oh no! You must select at least one type for a password to generate. Please try again.");
@@ -74,10 +74,12 @@ function generatePassword() {
 
   for (var i = 0; i <= length; i++) {
     var randomPick = Math.floor(Math.random() * selection.length);
-    pword = randomPick[i] + 1;
+    pword += selection[randomPick];
    }
 
-   console.log(pword)
+
+
+   console.log("this is final password " + pword);
 
    
 
