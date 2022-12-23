@@ -58,7 +58,7 @@ function generatePassword() {
    
   }
 
-  console.log(selection);
+
 
   // make sure at least on selection was made //
   if (selection.length == [0]) {
@@ -79,7 +79,7 @@ function generatePassword() {
 
 
 
-   console.log("this is final password " + pword);
+   return(pword);
 
    
 
