@@ -42,19 +42,19 @@ function generatePassword() {
   var specialChar = ["!","#", "$", "%", "&", "'", "()", "*", "+", ".", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~", "]"]
  
   if (getNumber == true) {
-    selection.push(numbers);
+    selection.concat(numbers);
   }
 
   if (getLowerC == true) {
-    selection.push(lowerCase);
+    selection.concat(lowerCase);
   }
 
   if (getUpperC == true) {
-    selection.push(upperCase);
+    selection.concat(upperCase);
   }  
 
   if (getSpecialC == true) {
-    selection.push(specialChar);
+    selection.concat(specialChar);
    
   }
 
